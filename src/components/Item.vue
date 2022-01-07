@@ -1,7 +1,9 @@
 <template>
   <li>
-    <input type="checkbox"/>
-    <span>Sleep</span>
+    <label>
+      <input type="checkbox">
+      <span>Sleep</span>
+    </label>
     <button class="btn btn-danger">Delete</button>
   </li>
 </template>

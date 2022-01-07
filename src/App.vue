@@ -46,6 +46,9 @@ export default {
     color: white;
   }
   .btn-danger:hover {
-    background-color: indianred;
+    background-color: orangered;
+  }
+  input[type=checkbox]:checked {
+    background: skyblue;
   }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div class="todo-footer">
-    <input type="checkbox"/>
+    <label>
+      <input type="checkbox">
+    </label>
     <span>已完成2 / 全部3</span>
     <button class="btn btn-danger">Delete completed task</button>
   </div>
