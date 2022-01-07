@@ -1,37 +1,24 @@
 <template>
   <div id="app">
     <div class="container">
-      <div class="todo-header">
-          <input type="text" placeholder="Enter something..."/>
-      </div>
-      <div class="todo-main">
-        <ul>
-          <li>
-            <input type="checkbox"/>
-            <span>Sleep</span>
-            <button class="btn btn-danger">Delete</button>
-          </li>
-          <li>
-            <input type="checkbox"/>
-            <span>Sleep</span>
-            <button class="btn btn-danger">Delete</button>
-          </li>
-        </ul>
-      </div>
-      <div class="todo-footer">
-        <input type="checkbox"/>
-        <span>已完成2 / 全部3</span>
-        <button class="btn btn-danger">Delete completed task</button>
-      </div>
+      <Header/>
+      <TodoList/>
+      <Footer/>
     </div>
   </div>
 </template>
 
 <script>
+import Header from "@/components/Header";
+import TodoList from "@/components/TodoList";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'App',
   components: {
+    Header,
+    TodoList,
+    Footer
   }
 }
 </script>
@@ -60,55 +47,5 @@ export default {
   }
   .btn-danger:hover {
     background-color: indianred;
-  }
-
-  /* Header */
-  .todo-header {
-    margin: 10px 30px;
-    padding-right: 10px;
-  }
-  .todo-header input {
-    width: 100%;
-    height: 26px;
-    border: solid 1px gray;
-    border-radius: 5px;
-    padding: 5px;
-  }
-
-  /* Main */
-  .todo-main {
-    margin: 20px 30px;
-  }
-  .todo-main ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    border: solid 1px gray;
-    border-radius: 5px;
-  }
-  .todo-main li {
-    padding: 5px;
-    text-align: left;
-    border-bottom: solid 1px gray;
-  }
-  .todo-main li:last-child {
-    border-bottom: none;
-  }
-  .todo-main li button {
-    display: none;
-    float: right;
-  }
-  .todo-main li:hover button {
-    display: block;
-  }
-
-  /* Footer */
-  .todo-footer {
-    margin: 10px 30px;
-    text-align: left;
-  }
-  .todo-footer button {
-    float: right;
-
   }
 </style>
